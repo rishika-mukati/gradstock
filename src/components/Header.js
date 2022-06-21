@@ -2,85 +2,86 @@ import React from 'react';
 import logo from '../images/logo.png'
 import { Container, Row } from 'react-bootstrap';
 import '../css/menu.css';
+import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <header className='header'>
             <Container>
                 <Row>
-                    <div class="col-md-3">
-                        <div class="main-logo">
-                            <img src={logo} className="" alt="logo" />
+                    <div className="col-md-3">
+                        <div className="main-logo">
+                            <Link to="/"><img src={logo} className="" alt="logo" /></Link>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <div class="header-right">
-                            <div class="header-top">
-                                <div class="search-area">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <select class="form-control">
-                                                <option selected="" value="">Select Option...</option>
+                    <div className="col-md-9">
+                        <div className="header-right">
+                            <div className="header-top">
+                                <div className="search-area">
+                                    <div className="input-group">
+                                        <div className="input-group-prepend">
+                                            <select className="form-control">
+                                                <option defaultValue="" value="">Select Option...</option>
                                                 <option value="">Fiction Book</option>
                                                 <option value="">Non-Fiction Book</option>
                                                 <option value="">Text Book</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Search here..." />
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-default" type="submit">
-                                                    <i class="fas fa-search"></i>
+                                        <input type="text" className="form-control" placeholder="Search here..." />
+                                            <div className="input-group-btn">
+                                                <button className="btn btn-default" type="submit">
+                                                    <i className="fas fa-search"></i>
                                                 </button>
                                             </div>
                                     </div>
                                 </div>
-                                <div class="tutorHelp">
-                                    <a href="tutor-my-question.html">Tutor Help <i class="far fa-question-circle" data-toggle="tooltip" title="" data-original-title="Get an Expert Tutor to help you with your homework"></i></a>
+                                <div className="tutorHelp">
+                                    <a href="tutor-my-question.html">Tutor Help <i className="far fa-question-circle" data-toggle="tooltip" title="" data-original-title="Get an Expert Tutor to help you with your homework"></i></a>
                                 </div>
                             </div>
-                            <div class="header-menus">
-                                <div class="menus">
-                                    <button class="nav-toggle">
-                                        <div class="icon-menu">
-                                            <span class="line line-1"></span>
-                                            <span class="line line-2"></span>
-                                            <span class="line line-3"></span>
+                            <div className="header-menus">
+                                <div className="menus">
+                                    <button className="nav-toggle">
+                                        <div className="icon-menu">
+                                            <span className="line line-1"></span>
+                                            <span className="line line-2"></span>
+                                            <span className="line line-3"></span>
                                         </div>
                                     </button>
-                                    <div class="nav nav-container">
-                                        <ul class="links">
-                                            <li class="active"><a href="school-list.html" class="parent">School</a>
+                                    <div className="nav nav-container">
+                                        <ul className="links">
+                                            <li className="active"><a href="school-list.html" className="parent">School</a>
                                                 <ul>
-                                                    <li class="">
+                                                    <li className="">
                                                         <a href="#">
                                                             <p>Liberty University</p>
-                                                            <div class="sub-img"><img src="images/liberty-university.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src="images/liberty-university.jpg" alt="" /></div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
                                                             <p>Biology</p>
-                                                            <div class="sub-img"><img src="images/biology.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src="images/biology.jpg" alt="" /></div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
                                                             <p>Business Textbook</p>
-                                                            <div class="sub-img"><img src="images/businessTextbook.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src="images/businessTextbook.jpg" alt="" /></div>
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li class=""><a href="fiction-book.html">Subject</a></li>
-                                            <li class=""><a href="books-page.html">Books</a></li>
-                                            <li class=""><a href="tutor-list.html">Ask Tutors</a></li>
-                                            <li class=""><a href="blog.html">Blog</a></li>
+                                            <li className=""><a href="fiction-book.html">Subject</a></li>
+                                            <li className=""><a href="books-page.html">Books</a></li>
+                                            <li className=""><a href="tutor-list.html">Ask Tutors</a></li>
+                                            <li className=""><NavLink to="/blog">Blog</NavLink></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="header-sign">
+                                <div className="header-sign">
                                     <ul>
-                                        <li><a href="#" class="login-btn btn" data-toggle="modal" data-target="#myModal">Login</a></li>
-                                        <li><a href="#" class="signup-btn btn" data-toggle="modal" data-target="#myModal">Sign up</a></li>
+                                        <li><a href="#" className="login-btn btn" data-toggle="modal" data-target="#myModal">Login</a></li>
+                                        <li><a href="#" className="signup-btn btn" data-toggle="modal" data-target="#myModal">Sign up</a></li>
                                     </ul>
                                 </div>
                             </div>

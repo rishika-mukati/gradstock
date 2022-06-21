@@ -12,19 +12,19 @@ function Banner() {
         slidesToScroll: 1
     };
     return (
-        <div class="section-banner-studySmarter">
+        <div className="section-banner-studySmarter">
 
-            <div class="main-banner">
-                <Slider {...settings} class="owl-carousel banner-slider">
+            <div className="main-banner">
+                <Slider {...settings} className="owl-carousel banner-slider">
                     <div>
-                        <div class="item">
-                            <div class="banner-slider-item">
-                                <div class="banner-slider-img">
+                        <div className="item">
+                            <div className="banner-slider-item">
+                                <div className="banner-slider-img">
                                     <img src={Banner2} alt="" />
                                 </div>
-                                <div class="banner-slider-cont">
-                                    <div class="container">
-                                        <div class="banner-slider-cont-inn">
+                                <div className="banner-slider-cont">
+                                    <div className="container">
+                                        <div className="banner-slider-cont-inn">
                                             <h2>Your heading</h2>
                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
                                                 eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -36,14 +36,14 @@ function Banner() {
                         </div>
                     </div>
                     <div>
-                        <div class="item">
-                            <div class="banner-slider-item">
-                                <div class="banner-slider-img">
+                        <div className="item">
+                            <div className="banner-slider-item">
+                                <div className="banner-slider-img">
                                     <img src={TipsBanner2} alt="" />
                                 </div>
-                                <div class="banner-slider-cont">
-                                    <div class="container">
-                                        <div class="banner-slider-cont-inn">
+                                <div className="banner-slider-cont">
+                                    <div className="container">
+                                        <div className="banner-slider-cont-inn">
                                             <h2>Your heading</h2>
                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
                                                 eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -57,29 +57,29 @@ function Banner() {
                 </Slider>
             </div>
 
-            <div class="studySmarter">
-                <div class="container">
-                    <div class="studySmarter-inn">
-                        <div class="studySmarter-head">
+            <div className="studySmarter">
+                <div className="container">
+                    <div className="studySmarter-inn">
+                        <div className="studySmarter-head">
                             <h2>Study Smarter</h2>
                             <p>Study documents for all your classes</p>
                         </div>
-                        <div class="studySmarter-form-div">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="studySmarter-form field form-group">
-                                        <label class="form-label" for="fullname">School</label>
-                                        <input type="text" class="form-control" placeholder="Enter a school" />
+                        <div className="studySmarter-form-div">
+                            <div className="row">
+                                <div className="col-md-5">
+                                    <div className="studySmarter-form field form-group">
+                                        <label className="form-label" htmlFor="fullname">School</label>
+                                        <input type="text" className="form-control" placeholder="Enter a school" />
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="studySmarter-form field form-group">
-                                        <label class="form-label" for="fullname">Course</label>
-                                        <input type="text" class="form-control" placeholder="Enter a course" />
+                                <div className="col-md-5">
+                                    <div className="studySmarter-form field form-group">
+                                        <label className="form-label" htmlFor="fullname">Course</label>
+                                        <input type="text" className="form-control" placeholder="Enter a course" />
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="studySmarter-form">
+                                <div className="col-md-2">
+                                    <div className="studySmarter-form">
                                         <input type="submit" value="FInd Course" />
                                     </div>
                                 </div>
