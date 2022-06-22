@@ -89,7 +89,7 @@ header.header {
 .header-sign ul li {
     padding: 0 2px;
 }
-.header-sign li a {
+.header-sign li .btn {
     background: #434343;
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
@@ -97,6 +97,7 @@ header.header {
     text-decoration: none;
     min-width: 95px;
     box-shadow: none !important;
+    border-color: transparent;
 }
 .cart-sign li a {
     background: #434343;
@@ -201,8 +202,9 @@ span.notification-dots {
     text-align: center;
     background: #2c2f8c;
 }
-.header-sign li:nth-child(1) a {
+.header-sign li:nth-child(1) .btn {
     background: #2c2f8c;
+    color: #fff;
 }
 .header-sign {
     margin-left: 2px;
@@ -853,8 +855,6 @@ footer.footer {
 .modal-sign-head {
     text-align: center;
     position: relative;
-    padding: 20px;
-    border-bottom: 1px solid rgba(44,47,140,0.2);
 }
 .modal-sign-div {
     position: relative;
@@ -881,9 +881,7 @@ footer.footer {
     line-height: 45px; 
 }
 .modal-sign-footer {
-    padding: 20px;
     text-align: center;
-    border-top: 1px solid rgba(44,47,140,0.2);
 }
 .modal-sign-footer p {
     margin: 0;
@@ -894,6 +892,35 @@ footer.footer {
 }
 .modal-sign-footer p a {
     color: #2c2f8c;
+}
+.modal-footer {
+    justify-content: center !important;
+    padding: 20px !important;
+}
+.modal-header .btn-close {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 17px;
+    font-weight: normal;
+    box-shadow: -7px 7px 14px 0px rgb(0 0 0 / 30%);
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 45px;
+    text-shadow: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E") !important;
+    background-color: #cf4232;
+}
+.modal-header {
+    justify-content: center !important;
 }
 .modal-sign-body {
     padding: 20px 50px;
@@ -958,6 +985,13 @@ footer.footer {
 }
 .social-div {
     text-align: center;
+}
+.social-div ul {
+    display: flex;
+    padding-left: 0;
+}
+.modal-body {
+    padding: 0 !important;
 }
 .social-div ul li {
     display: inline-block;

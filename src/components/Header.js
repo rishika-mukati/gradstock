@@ -1,9 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from '../images/logo.png'
-import { Container, Row } from 'react-bootstrap';
+import university from "../images/liberty-university.jpg";
+import biology from "../images/biology.jpg";
+import businessTextbook from "../images/businessTextbook.jpg";
+import { Container, Row, Button } from 'react-bootstrap';
 import '../css/menu.css';
 import { Link, NavLink } from 'react-router-dom';
+import Login from '../auth/Login'
+import Signup from '../auth/Signup'
 const Header = () => {
+    const [modalShow, setModalShow] = useState(false);
+    const [modalShowsignup, setModalShowsignup] = useState(false);
     return (
         <header className='header'>
             <Container>
@@ -27,11 +34,11 @@ const Header = () => {
                                             </select>
                                         </div>
                                         <input type="text" className="form-control" placeholder="Search here..." />
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-default" type="submit">
-                                                    <i className="fas fa-search"></i>
-                                                </button>
-                                            </div>
+                                        <div className="input-group-btn">
+                                            <button className="btn btn-default" type="submit">
+                                                <i className="fas fa-search"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="tutorHelp">
@@ -49,39 +56,45 @@ const Header = () => {
                                     </button>
                                     <div className="nav nav-container">
                                         <ul className="links">
-                                            <li className="active"><a href="school-list.html" className="parent">School</a>
+                                            <li className="active"><NavLink to="/school-list" className="parent">School</NavLink>
                                                 <ul>
                                                     <li className="">
                                                         <a href="#">
                                                             <p>Liberty University</p>
-                                                            <div className="sub-img"><img src="images/liberty-university.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src={university} alt="" /></div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
                                                             <p>Biology</p>
-                                                            <div className="sub-img"><img src="images/biology.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src={biology} alt="" /></div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
                                                             <p>Business Textbook</p>
-                                                            <div className="sub-img"><img src="images/businessTextbook.jpg" alt="" /></div>
+                                                            <div className="sub-img"><img src={businessTextbook} alt="" /></div>
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className=""><a href="fiction-book.html">Subject</a></li>
-                                            <li className=""><a href="books-page.html">Books</a></li>
-                                            <li className=""><a href="tutor-list.html">Ask Tutors</a></li>
+                                            <li className=""><NavLink to="/subject">Subject</NavLink></li>
+                                            <li className=""><NavLink to="/books">Books</NavLink></li>
+                                            <li className=""><NavLink to="/tutor-list">Ask Tutors</NavLink></li>
                                             <li className=""><NavLink to="/blog">Blog</NavLink></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="header-sign">
                                     <ul>
-                                        <li><a href="#" className="login-btn btn" data-toggle="modal" data-target="#myModal">Login</a></li>
-                                        <li><a href="#" className="signup-btn btn" data-toggle="modal" data-target="#myModal">Sign up</a></li>
+                                        <li>
+                                            <Button className='login-btn btn' onClick={() => setModalShow(true)}>
+                                                Login
+                                            </Button>
+                                        </li>
+                                        <li>
+                                            <Button className="signup-btn btn" onClick={() => setModalShowsignup(true)}>Sign up</Button>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,6 +102,14 @@ const Header = () => {
                     </div>
                 </Row>
             </Container>
+            <Login
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+            <Signup
+                show={modalShowsignup}
+                onHide={() => setModalShowsignup(false)}
+            />
         </header>
     )
 }
